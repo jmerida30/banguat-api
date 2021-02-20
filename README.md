@@ -10,8 +10,8 @@ pip install flask-restful
 python api.py
 
 # 3. Test API
-- Single date
+- Single date:
 http://localhost:5000/items?date=2021-02-19&currency=USD
 
--Range of dates
+- Range of dates:
 http://localhost:5000/items?start_date=2021-02-14&end_date=2021-02-17&currency=USD
