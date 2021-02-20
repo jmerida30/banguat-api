@@ -3,9 +3,9 @@ RESTful API on Python to access Banguats' information about change rate between 
 
 ## Running files
 ### 1. Requirements
-pip install pandas
-pip install -U Flask
-pip install flask-restful
+- pip install pandas
+- pip install -U Flask
+- pip install flask-restful
 
 ### 2. Run API
 python api.py
