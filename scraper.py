@@ -15,7 +15,3 @@ def single_date(date, currency):
         euro = tables[3]
         euro = float(euro.iloc[11, 1])
         return date, currency, euro * dolar
-    
-
-print(single_date("2017-02-17", "USD"))
-print(single_date('2017-02-17', "EURO"))
