@@ -1,0 +1,4 @@
+pandas
+lxml
+flask
+flask_restful
