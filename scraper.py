@@ -23,7 +23,7 @@ def single_date(date, currency):
     elif currency == "EURO":
         euro = tables[3] # La 4ta tabla es la que contiene el valor de tipo de cambio para euros.
         euro = float(euro.iloc[11, 1])
-        return date, currency, euro * dolar
+        return [date, currency, euro * dolar]
 
 # Funcion del Metodo 2, recibe rango de fechas y devuelve 
 def range_dates(start_date, end_date, currency):
@@ -53,9 +53,10 @@ def range_dates(start_date, end_date, currency):
     end = datetime.datetime.strptime(table.iloc[-1, 0], "%d/%m/%Y").strftime("%Y-%m-%d")
     
     # Se calcula el minimo, maximo y promedio de los tipos de cambio disponibles denro de la tabla.
-    min_rate = min(pd.to_numeric(table.iloc[:, 1]))
+    # Para el caso de tipo de moneda EURO este resultado es devuelto en dolares.
+    min_rate = min(pd.to_numeric(table.iloc[:, 1])) 
     max_rate = max(pd.to_numeric(table.iloc[:, 1]))
     mean = pd.to_numeric(table.iloc[:, 1]).mean()
 
     # Devolucion de los datos
-    return start, end, currency, mean, max_rate, min_rate
+    return [start, end, currency, mean, max_rate, min_rate]
