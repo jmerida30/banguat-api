@@ -9,7 +9,7 @@ RESTful API on Python to access Banguats' information about change rate between 
 - single_date(date, currency) es la funcion que se encarga de realizar la consulta hacia banguat con los datos de fecha y tipo de moneda. Esta devuelve el tipo de cambio de dolares expresado en quetzalas y el de euro expresado en quetzales haciendo la conversion por medio del tipo de cambio de dolar.
 - range_dates(start_date, end_date, currency) la cual devuelve el tipo de cambio en quetzales cuando currency='USD' y en dolares cuando currency='EURO'.  
 - El argumento date se espera en formato yyyy-mm-dd.
-- El argumento currency puede pertenece a ['USD', 'EURO'].
+- El argumento currency pertenece a ['USD', 'EURO'].
 
 ## Running files
 ### 1. Requirements
